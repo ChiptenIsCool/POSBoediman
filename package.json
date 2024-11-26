@@ -1,0 +1,38 @@
+{
+  "name": "myposapp",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^7.0.4",
+    "@react-navigation/native-stack": "^7.1.1",
+    "@react-navigation/stack": "^7.0.0",
+    "expo": "^52.0.11",
+    "expo-file-system": "^18.0.4",
+    "expo-sharing": "^13.0.0",
+    "expo-sqlite": "~15.0.3",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.3",
+    "react-native-esc-pos-printer": "^4.2.0",
+    "react-native-gesture-handler": "^2.21.2",
+    "react-native-reanimated": "^3.16.2",
+    "react-native-safe-area-context": "^4.14.0",
+    "react-native-screens": "^4.3.0",
+    "react-native-sqlite-storage": "^6.0.1",
+    "react-native-thermal-receipt-printer": "^1.2.0-rc.2",
+    "react-native-uuid": "^2.0.2",
+    "react-native-vector-icons": "^10.2.0",
+    "uuid": "^11.0.3",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@react-native-community/cli": "^15.1.2"
+  },
+  "private": true
+}

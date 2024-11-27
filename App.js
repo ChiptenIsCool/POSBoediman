@@ -42,7 +42,6 @@ export default function App() {
 </Stack.Screen>
 
           <Stack.Screen name="OrderSummary" component={OrderSummaryScreen} />
-          <Stack.Screen name="History" component={HistoryScreen} />
           <Stack.Screen name="Checkout" component={CheckoutScreen} />
         </Stack.Navigator>
       </NavigationContainer>

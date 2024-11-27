@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Modal, StyleSheet, Dimensions } from 'react-native';
-import { addons } from '../menuData'; // Ensure this is properly imported or fetched if dynamic
+import menuData from '../menuData.json'; // Import JSON directly
 import { menuConfig } from '../menuConfig';
 
 export default function EditItemModal({ item, onSave, onCancel }) {
@@ -14,10 +14,11 @@ export default function EditItemModal({ item, onSave, onCancel }) {
     const itemConfig = menuConfig.find((configItem) => configItem.name === item.name);
     setConfig(itemConfig);
 
+    // Initialize addons with default values based on menuConfig
     const initialAddons = {};
     if (itemConfig?.defaultAddons) {
       Object.keys(itemConfig.defaultAddons).forEach((category) => {
-        const defaultAddon = addons.find(
+        const defaultAddon = menuData.menuAddons.find(
           (addon) => addon.name === itemConfig.defaultAddons[category] && addon.category === category
         );
         if (defaultAddon) {
@@ -41,7 +42,7 @@ export default function EditItemModal({ item, onSave, onCancel }) {
       .filter(Boolean)
       .map((addon) => ({
         ...addon,
-        price: item.name === "Kopi Pak Boedi" && addon.name === "Aren Syrup" ? 0 : addon.price,
+        price: item.name === 'Kopi Pak Boedi' && addon.name === 'Aren Syrup' ? 0 : addon.price,
       }));
 
     const updatedItem = {
@@ -63,7 +64,7 @@ export default function EditItemModal({ item, onSave, onCancel }) {
             <View key={category} style={styles.categoryContainer}>
               <Text style={styles.sectionTitle}>{category}:</Text>
               <View style={styles.optionsRow}>
-                {addons
+                {menuData.menuAddons
                   .filter((addon) => addon.category === category)
                   .map((addon) => {
                     const isRestricted = config?.restrictedAddons?.includes(category);
@@ -101,7 +102,6 @@ export default function EditItemModal({ item, onSave, onCancel }) {
     </Modal>
   );
 }
-
 
 const { width, height } = Dimensions.get('window');
 const isLandscape = width > height;

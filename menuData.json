@@ -1,10 +1,22 @@
 {
     "menuItems": [
-      { "id": 1, "name": "Kopi Pak Boedi", "price": 20000, "category": "Beverages" },
-      { "id": 2, "name": "Tubruk", "price": 139000, "category": "Beverages" },
-      { "id": 3, "name": "Latte", "price": 25000, "category": "Beverages" },
-      { "id": 4, "name": "Cappuccino", "price": 25000, "category": "Beverages" },
-      { "id": 5, "name": "Flat White", "price": 25000, "category": "Beverages" }
+      { "id": 1, "name": "Kopi Boedi", "price": 22000, "category": "Beverages" },
+      { "id": 2, "name": "Tubruk", "price": 8000, "category": "Beverages" },
+      { "id": 3, "name": "Long Black", "price": 20000, "category": "Beverages" },
+      { "id": 4, "name": "Latte", "price": 25000, "category": "Beverages" },
+      { "id": 5, "name": "Cappuccino", "price": 25000, "category": "Beverages" },
+      { "id": 6, "name": "Flat White", "price": 25000, "category": "Beverages" },
+      { "id": 7, "name": "Cokelat", "price": 25000, "category": "Beverages" },
+      { "id": 8, "name": "Piccolo", "price": 22000, "category": "Beverages" },
+      { "id": 9, "name": "Mocha", "price": 28000, "category": "Beverages" },
+      { "id": 10, "name": "Matcha", "price": 25000, "category": "Beverages" },
+      { "id": 11, "name": "Matcha Kopi", "price": 28000, "category": "Beverages" },
+      { "id": 12, "name": "Genmaicha", "price": 25000, "category": "Beverages" },
+      { "id": 13, "name": "Hojicha", "price": 25000, "category": "Beverages" },
+      { "id": 14, "name": "Earl Grey Milk Tea", "price": 25000, "category": "Beverages" },
+      { "id": 15, "name": "Oolong Milk Tea", "price": 25000, "category": "Beverages" },
+      { "id": 16, "name": "Segelas Susu", "price": 15000, "category": "Beverages" }
+      
     ],
     "menuAddons": [
       { "id": 1, "name": "Normal Sugar", "price": 0, "category": "Sugar Level" },

@@ -62,9 +62,15 @@ export default StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
   },
+  paymentRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Ensure buttons are spaced evenly
+    marginVertical: 10,
+  },
   paymentOption: {
+    flex: 1, // Make each button take up equal space
     padding: 10,
-    marginVertical: 5,
+    marginHorizontal: 5, // Add spacing between buttons
     borderRadius: 8,
     backgroundColor: '#e0e0e0',
     alignItems: 'center',

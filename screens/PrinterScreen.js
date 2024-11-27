@@ -1,3 +1,4 @@
+/*
 import { BluetoothManager, BluetoothEscposPrinter } from 'react-native-thermal-receipt-printer';
 
 function TestPrinter() {
@@ -31,3 +32,4 @@ function TestPrinter() {
     </View>
   );
 }
+  */

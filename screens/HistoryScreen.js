@@ -1,3 +1,4 @@
+/*
 import React, { useContext, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, ScrollView } from 'react-native';
 import { OrderContext } from '../contexts/OrderContext';
@@ -86,3 +87,4 @@ export default function HistoryScreen({ navigation }) {
     </View>
   );
 }
+  */

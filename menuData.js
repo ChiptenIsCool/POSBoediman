@@ -4,7 +4,7 @@
 import uuid from 'react-native-uuid';
 
 // Menu items
-export const menuItems = [
+export const menuItems= [
     {
         id: '4',
         name: 'Kopi Pak Boedi',
@@ -212,6 +212,7 @@ export const generateItemWithUID = (item) => ({
 });
   
   // Add-ons
+  /*
   export const addons = [
     { id: 'sugar-1', name: 'Normal Sugar', category: 'Sugar Level', price: 0 },
     { id: 'sugar-2', name: 'Less Sugar', category: 'Sugar Level', price: 0 },
@@ -229,6 +230,7 @@ export const generateItemWithUID = (item) => ({
     { id: 'temperature-1', name: 'Hot', category: 'Temperature', price: 0 },
     { id: 'temperature-2', name: 'Iced', category: 'Temperature', price: 0 },
   ];
+  */
   
   export const paymentMethods = [
     { id: '1', name: 'QRIS' },

@@ -10,7 +10,7 @@ let isDatabaseInitialized = false;
 export const initializeDatabase = async () => {
 
   if (isDatabaseInitialized) return; // Prevent duplicate initialization
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
   
   
   try {
@@ -85,7 +85,7 @@ export const initializeDatabase = async () => {
 // Populate database with data from menuData.json
 export const populateDataFromJson = async () => {
 
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
 
   try {
     console.log('Populating database with menu data...');
@@ -122,7 +122,7 @@ export const populateDataFromJson = async () => {
 };
 
 export const insertOrder = async (customerName, paymentType, order) => {
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
 
   try {
     await db.execAsync('BEGIN TRANSACTION;');
@@ -185,7 +185,7 @@ export const insertOrder = async (customerName, paymentType, order) => {
 
 // Fetch menu items
 export const fetchMenuItems = async () => {
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
 
   try {
     console.log('Fetching menu items...');
@@ -210,23 +210,26 @@ export const closeDatabase = async () => {
 
 
 export const fetchOrders = async () => {
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
 
   try {
+    
+
+    /* UNCOMMENT THE CODE BELOW TO DELETE CURRENT DATA */
+    //await db.execAsync(`DELETE FROM menu_items;`)
+    //await db.execAsync(`DELETE FROM menu_addons;`)
+    //await db.execAsync(`DELETE FROM orders;`)
+    //await db.execAsync(`DELETE FROM order_details;`)
+    //await db.execAsync(`DELETE FROM order_details_addons;`)
     const result4 = await db.getAllAsync(`SELECT * FROM menu_items;`);
     const result5 = await db.getAllAsync(`SELECT * FROM menu_addons;`);
     const result = await db.getAllAsync(`SELECT * FROM orders;`);
     const result1 = await db.getAllAsync(`SELECT * FROM order_details;`);
     const result2 = await db.getAllAsync(`SELECT * FROM order_details_addons;`);
-
-    /* UNCOMMENT THE CODE BELOW TO DELETE CURRENT DATA */
-    //await db.execAsync(`DELETE FROM orders;`)
-    //await db.execAsync(`DELETE FROM order_details;`)
-    //await db.execAsync(`DELETE FROM order_details_addons;`)
     
     //console.log('Fetched orders:', result);
     //console.log('Fetched orders details:', result1);
-    //console.log('Fetched orders details addons:', result2);
+    console.log('Fetched orders details addons:', result2);
     //console.log('Fetched menuitems:', result4);
     //console.log('Fetched menuaddons:', result5);
 
@@ -246,7 +249,7 @@ export const fetchOrders = async () => {
 // Fetch all orders from the database
 /*
 export const fetchOrders = async () => {
-  if (!db) db = await SQLite.openDatabaseAsync('pos1111.db');
+  if (!db) db = await SQLite.openDatabaseAsync('posBoediman.db');
 
   try {
     const orders = await db.getAllAsync(`
@@ -288,8 +291,8 @@ export const fetchOrders = async () => {
 // Share the database file
 export const shareDatabase = async () => {
   try {
-    const dbPath = FileSystem.documentDirectory + 'SQLite/pos1111.db';
-    console.log('Database file path:', FileSystem.documentDirectory + 'SQLite/pos1111.db');
+    const dbPath = FileSystem.documentDirectory + 'SQLite/posBoediman.db';
+    console.log('Database file path:', FileSystem.documentDirectory + 'SQLite/posBoediman.db');
 
     // Close the database to ensure all data is written to disk
     if (db) {

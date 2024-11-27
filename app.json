@@ -4,7 +4,7 @@
     "slug": "myPosApp",
     "version": "1.0.0",
     "orientation": "default",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon2.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
